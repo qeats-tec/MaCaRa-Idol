@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --bg-page: #fbf7ee;
+    --bg-surface: #ffffff;
+    --bg-card: #f8f1e5;
+    --text-primary: #231911;
+    --text-secondary: #5e4835;
+    --text-muted: #8e7661;
+    --border-color: #e5d7c3;
+    --gold-primary: #d49a2a;
+    --gold-hover: #b8821f;
+    --gold-subtle: #faedd5;
+    --caramel-brown: #6b3e1b;
+    --espresso-dark: #2a1a10;
+  }
+
+  .dark {
+    --bg-page: #0f0b08;
+    --bg-surface: #18120d;
+    --bg-card: #221913;
+    --text-primary: #fcf6ee;
+    --text-secondary: #cfbeae;
+    --text-muted: #968372;
+    --border-color: #38281d;
+    --gold-primary: #f5b942;
+    --gold-hover: #e0a32d;
+    --gold-subtle: #291e12;
+    --caramel-brown: #dca074;
+    --espresso-dark: #faf5ee;
+  }
+
+  html {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-mono-code {
+  font-family: 'Space Grotesk', monospace;
+}
+
+/* Warm Luxury Gradients & Accents */
+.bg-warm-luxury-gradient {
+  background: linear-gradient(180deg, #fdfaf3 0%, #f6ece0 50%, #faf3e8 100%);
+}
+
+.dark .bg-warm-luxury-gradient {
+  background: linear-gradient(180deg, #130d09 0%, #0c0806 50%, #160e0a 100%);
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #f0ca7d 0%, #d49a2a 50%, #874b1e 100%);
+}
+
+.dark .bg-gold-gradient {
+  background: linear-gradient(135deg, #fae2b8 0%, #e5a83b 50%, #9a531f 100%);
+}
+
+.border-gold-subtle {
+  border-color: rgba(212, 154, 42, 0.35);
+}
+
+.dark .border-gold-subtle {
+  border-color: rgba(245, 185, 66, 0.35);
+}
